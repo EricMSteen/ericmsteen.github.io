@@ -1,5 +1,5 @@
 var x = 0;
-var birb = document.createElement("birb.gif").style.position="";
+var birb = document.createElement("birb.gif").style.position="absolute";
 draw = function(){
 	birb.style.position(x,100);
 var y = 5;
