@@ -5,17 +5,22 @@
 <body background="tenor.gif">
 <body>
 	<h1>A better webpage than Tanner's</h1>
-	<img src="https://ericmsteen.github.io/hannible_devito.jpg">
+	<img src="hannible_devito.jpg">
 	<p> "They don't think it do be like it is but it do... and that's whack" -Hannibal Devito </p>
 	<script src="Galah.js"></script>
-	<button onclick="bruhButton()">Bruh!</button>
+	<button onclick="bruhButton("Bruh.mp3")">Bruh!</button>
 	<script>
-		function bruhButton(){
-
-		}
+		function bruhButton(source){
+			var bruh = new Audio(source);
+			bruh.play();
+		   }
 	</script>
+	<audio src = "Bruh.mp3">
+		
+
+	</audio>
 	<object width="300" height="42">
-	<param name="src" value="Bruh.mp3">
+	<param name="src" value="">
 	<param name="autoplay" value="true">
 	<param name="controller" value="true">
 	<param name="bgcolor" value="#FF69B4">
