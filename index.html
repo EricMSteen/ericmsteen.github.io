@@ -20,12 +20,50 @@
 
 	</audio>
 	<script >
-		img = document.createElement('img');
-		img.src = "birb.gif";
-		img.style.position = "absolute";
-		img.style.left = "1000px";
-		img.style.top = "420px";
+		function birby(){
+			var img, left, top, counter, interval;
 
+			img = document.createElement('img');
+
+			img.src = "birb.gif";
+
+			img.style.position = "absolute";
+			img.style.left = "1000px";
+			img.style.top = "420px";
+
+			img.style.zIndex = 100;
+
+			document.body.appendChild(img);
+
+			counter = 50;
+			interval = 200;
+			window.setTimeout(wanderAround, interval){
+				--counter;
+		        if (counter < 0)
+		        {
+		            // Done; remove it
+		            document.body.removeChild(img);
+		        }
+		        else
+		        {
+		            // Animate a bit more
+		            left += Math.floor(Math.random() * 20) - 10;
+		            if (left < 0)
+		            {
+		                left = 0;
+		            }
+		            top  += Math.floor(Math.random() * 10)  - 5;
+		            if (top < 0)
+		            {
+		                top = 0;
+		            }
+		            img.style.left = left + "px";
+		            img.style.top  = top  + "px";
+
+		            // Re-trigger ourselves
+		            window.setTimeout(wanderAround, interval);
+			}
+		}
 	</script>
 	<object width="300" height="42">
 	<param name="src" value="">
