@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta http-equiv='X-UA-Compatible' content='er=edge'>
+	<link rel='stylesheet' href='main.css'>
+	<title>Document</title>
+</head>
+<body>
+	<div class='leftbar'>
+		<h2 font='Helvetica'>Search Bar</h2>
+		<div>
+			<form id='form'>
+
+				<input type='text' id='archetype' placeholder='archetype'>
+				<input type='text' id='fname' placeholder='fname'>
+				<p class='searchbox' onclick='resetBoard();'>Search</p>
+			</form>
+		</div>
+		<ul class='dropdown-menu checkbox-menu allow-focus'>
+ 			<input id='slide-sidebar' type="checkbox" role="button" />
+                        <label for="slide-sidebar"><span>Search</span></label>
+                        <div class='sidebar'><h1>Search</h1>
+
+                        <select class='form-select' id='Card'>
+                                <option>--Card--</option>
+                                <option>Monster</option>
+                                <option>Spell</option>
+                                <option>Trap</option>
+                        </select>
+                        <select id='race-monster'>
+                                <option>--race--</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast">Beast</option>
+                                <option value="beast-warrior">Beast-Warrior</option>
+                                <option value='Creator-God'>Creator-God</option>
+                                <option value='cyberse'>Cyberse</option>
+                                <option value='dinosaur'>Dinosaur</option>
+                                <option value='divine-beast'>Divine-Beast</option>
+                                <option value='dragon'>Dragon</option>
+                                <option value='fairy'>Fairy</option>
+                                <option value='fiend'>Fiend</option>
+                                <option value='fish'>Fish</option>
+    				<option value='insect'>Insect</option>
+                                <option value='machine'>Machine</option>
+                                <option value='plant'>Plant</option>
+                                <option value='psychic'>Psychic</option>
+                                <option value='pyro'>Pyro</option>
+                                <option value='reptile'>Reptile</option>
+                                <option value='rock'>Rock</option>
+                                <option value='sea serpent'>Sea Serpent</option>
+                                <option value='spellcaster'>Spellcaster</option>
+                                <option value='thunder'>Thunder</option>
+                                <option value='warrior'>Warrior</option>
+                                <option value='winged beast'>Winged Beast</option>
+                        </select>
+                        <select id='race-magic'>
+                                <option value='normal'>Normal</option>
+                                <option value='eield'>Field</option>
+                                <option value='equip'>Equip</option>
+                                <option value='continuous'>Continuous</option>
+                                <option value='quick-play'>Quick-Play</option>
+                                <option value='ritual'>Ritual</option>
+                        </select>
+                        <select id='race-trap'>
+
+
+                        </select>
+			<li>
+				<label>
+					<input type='checkbox'> cheese
+				</label>
+			</li>
+		</ul>
+	</div>
+
+	<div id='cardboard' class='cardboard'>
+		<script src='scroller.js'>
+			//	readData('https://db.ygoprodeck.com/api/v7/cardinfo.php?atk=0&race=rock');
+		</script>
+
+	</div>
+	<div class='sidebar'>
+		<h2 id='name' class='namebox'>Card Name</h2>
+		<img src='./gray.jpg'  	class='card-2' id='display-card'>
+		<h2 id='atk'  	class='statbox statbox-1'></h2>
+		<h2 id='def'  	class='statbox statbox-2'></h2>
+		<h3 id='level' 	class='levelbox'></h3>
+		<h3 id='race'	class='racebox'></h3>
+		<h3 id='type'	class='typebox'></h3>
+		<h3 id='attr'	class='attrbox'></h3>
+		<h5 id='desc' 	class='descbox'></h5>
+		<h6 id='arch'	class='archbox'></h6>
+
+		<h6 id='prices'	class='pricetable'></h6>
+	</div>
+
+
+</body>
