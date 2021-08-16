@@ -1,3 +1,12 @@
+@font-face{
+	font-family: Roboto;
+	src: url(fonts/Roboto-Regular),
+		 url(fonts/Roboto-Italic),
+		 url(fonts/Roboto-Medium),
+		 url(fonts/Roboto-Black);
+
+}
+
 .card {
 	background: #fff;
 	border-radius: 2px;
@@ -11,7 +20,7 @@
 	z-index: 2;
 }
 .card:hover {
-	box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.25);
+	box-shadow: 0 7px 14px rgba(0,0,0,0.5), 0 5px 5px rgba(0,0,0,0.25);
 }
 .card-2 {
 	height: 	492px * 1.5;
@@ -34,6 +43,10 @@
 
 .sidebar {
 	background: 	#fa3;
+	background: rgb(2,0,36);
+	background: -webkit-linear-gradient(66deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	background: -o-linear-gradient(66deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(156deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 	float:		right;
 	display:	block;
 	position:	fixed;
@@ -44,6 +57,40 @@
 	border-style:	solid;
 	right:		0px;
 }
+
+.searchButton{
+	border: 1px solid black;
+	background-color: green;
+	border-radius: 20px;
+	width: 50px;
+	text-align: center;
+
+}
+
+.type-form{
+	display: block;
+
+}
+.type-monster{
+	visibility: hidden;
+}
+.type-magic{
+	visibility: hidden;
+}
+.type-trap{
+	visibility: hidden;
+}
+
+.atk-form{
+	width: 100px;
+	display: inline-block;
+	margin-right: 80px;
+
+}
+.atk-mod-form{
+	display: inline;
+}
+
 .cardboard {
 	background-color: #ffe;
 	position: 	absolute;
@@ -64,11 +111,13 @@
 	bottom:	0;
 	width: 250px;
 	border-style: solid;
+	left: 0px;
 
 
 }
 
 .namebox {
+	visibility: visible;
 	align:	center;
 	text-align: center;
 	font-family: Helvetica;
@@ -81,17 +130,21 @@
 
 
 .statbox {
-
+	font-family: "Roboto-Black", monospace;
+	font-weight: 900;
+	font-size: 24px;
+	visibility: hidden;
 	display: inline-block;
 	border-style: solid;
 	border-radius: 15px;
 	align: left;
 	padding: 10;
-	width: 120px;
-	margin: 20px;
+	width: 140px;
+	margin: 10px;
 	background-color: #ffa;
 	margin-top: -150px;
 	position: absolute;
+	text-align: center;
 
 }
 .statbox-1{
@@ -100,27 +153,30 @@
 .statbox-2 {
 	.statbox;
 	align: right;
-	margin-left: 200px;
+	margin-left: 180px;
 
 }
 .descbox {
+	font-family: "Roboto-Regular", monospace;
+	font-weight: 400;
 	display: flex;
 	border: solid 2px black;
 	border-radius: 15px;
 	padding: 10px;
 	margin: 10px;
 	background-color: #ffa;
-	margin-top: -50px;
+	margin-top: -75px;
 
 }
 .levelbox {
+	visibility: hidden;
 	display: inline-block;
 	margin: 10px;
 	margin-top: -100px;
 	align: left;
 	width: 50px;
 	position: absolute;
-	margin-left: 40px;
+	margin-left: 15px;
 
 }
 
@@ -128,13 +184,13 @@
 	display: inline-block;
 	position: absolute;
 	margin-top: -100px;
-	margin-left: 100px;
+	margin-left: 85px;
 }
 .attrbox {
 	display: inline-block;
 	position: absolute;
-	margin-top: -117px;
-	margin-left: 255px;
+	margin-top: -121px;
+	margin-left: 245px;
 }
 .archbox {
 	display: inline-block;

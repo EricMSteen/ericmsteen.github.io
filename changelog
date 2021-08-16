@@ -1,0 +1,15 @@
+v .1
+    loaded to github
+
+v .2
+    finished adding search controls
+
+    made display background color change per card
+
+    added gradients to display background
+
+    added bootstrap
+
+    refactored some js
+
+    added deck menu for keeping cards 
